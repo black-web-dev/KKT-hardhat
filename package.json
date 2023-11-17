@@ -1,0 +1,46 @@
+{
+    "name": "test-contract",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "compile": "npx hardhat compile",
+        "deploy-testnet:default-KKT": "npx hardhat run scripts/default-KKT-testnet-deploy.ts --network polygonMumbai",
+        "deploy-testnet:upgrade-KKT": "npx hardhat run scripts/upgrade-KKT-testnet-deploy.ts --network polygonMumbai",
+        "deploy-testnet:USDT": "npx hardhat run scripts/usdt-testnet-deploy.ts --network polygonMumbai",
+        "verify-testnet:KKT": "npx hardhat verify --contract contracts/KKT/KKT.sol:KKT --network polygonMumbai",
+        "verify-testnet:USDT": "npx hardhat verify --contract contracts/TUSDT.sol:TUSDT --network polygonMumbai",
+        "verify-testnet:KakiOrder": "npx hardhat verify --contract contracts/KakiOrder.sol:KakiOrder --network polygonMumbai",
+        "deploy-mainnet:default-KKT": "npx hardhat run scripts/default-KKT-mainnet-deploy.ts --network polygonMatic",
+        "deploy-mainnet:upgrade-KKT": "npx hardhat run scripts/upgrade-KKT-mainnet-deploy.ts --network polygonMatic",
+        "verify-mainnet:KKT": "npx hardhat verify --contract contracts/KKT/KKT.sol:KKT --network polygonMatic",
+        "lint": "prettier --list-different .",
+        "format": "prettier --write ."
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@nomiclabs/hardhat-etherscan": "^3.1.7",
+        "@openzeppelin/hardhat-upgrades": "^1.22.1",
+        "hardhat": "^2.13.0",
+        "prettier": "^2.8.3",
+        "prettier-plugin-solidity": "^1.1.1",
+        "ts-node": "^10.9.1",
+        "typescript": "^4.9.4"
+    },
+    "dependencies": {
+        "@nomicfoundation/hardhat-toolbox": "^2.0.0",
+        "@nomiclabs/hardhat-ethers": "^2.2.2",
+        "@nomiclabs/hardhat-waffle": "^2.0.3",
+        "@openzeppelin/contracts": "^4.8.0",
+        "@openzeppelin/contracts-upgradeable": "^4.8.1",
+        "@types/web3": "^1.2.2",
+        "@uniswap/v3-core": "^1.0.1",
+        "@uniswap/v3-periphery": "^1.4.3",
+        "dotenv": "^16.0.3",
+        "import": "^0.0.6",
+        "solhint": "^3.3.8",
+        "web3": "^1.8.1"
+    }
+}
